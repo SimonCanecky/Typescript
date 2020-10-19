@@ -2,34 +2,15 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
   }
 
-let a = getRandomInt(5);         //trochu zložitejšie cez random
-let b = getRandomInt(5);
-let c = getRandomInt(5);
+let a = getRandomInt(10);         
+let b = getRandomInt(10);
+let c = getRandomInt(10);
 
-console.log("Random cislo a: " + a);
-console.log("Random cislo b: " + b);
-console.log("Random cislo c: " + c);
-
-
-if (a == b) {
-    if (a == c) {
-        console.log("Rovnake su: 3");
-    } else if (b != c) {
-        console.log("Rovnake su: 2");
-    }
+if (a + b > c && a + c > b && b + c > a){
+    console.log("Hodnoty: " + a + ", " + b + ", " + c);
+    console.log("Trojuhlonik: true");
 }
-
-else if (b == c) {
-    if (a != c) {
-        console.log("Rovnake su: 2");
-    }
-}
-else if (a == c) {
-    if (b != c) {
-        console.log("Rovnake su: 2");
-    }
-}
-else {
-    console.log("Rovnake su: 0");
-
+else{
+    console.log("Hodnoty: " + a + ", " + b + ", " + c);
+    console.log("Trojuhlonik: false");
 }
